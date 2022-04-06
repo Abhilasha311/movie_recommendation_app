@@ -1,9 +1,8 @@
 import streamlit as st
 import requests
 
- st.title('Movie Recommendation System')
-
- st.header('Find movies of your choice!!!!!')
+st.title('Movie Recommendation System')
+st.header('Find movies of your choice!!!!!')
 
 import pickle
 
