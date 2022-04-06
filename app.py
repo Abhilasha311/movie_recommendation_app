@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import bz2
 
 st.title('Movie Recommendation System')
 st.header('Find movies of your choice!!!!!')
@@ -30,7 +31,7 @@ def recommend(movie):
 
 st.header('Movie Recommender System')
 movies = pickle.load(open('movie_recommender.pkl','rb'))
-similarity = pickle.load(open('similarity_model.pkl','rb'))
+similarity = bz2.load(open('similarity_model.pkl','rb'))
 
 movie_list = movies['title'].values
 selected_movie = st.selectbox(
